@@ -45,9 +45,9 @@ namespace SaveThemAll.AutoTile.Editor
         private List<string> BrushNames()
         {
             List<string> names = new List<string> { "Automatic" };
-            if (Map.catalog != null)
+            if (Map.catalog != null && Map.catalog.entries != null)
                 foreach (TerrainCatalog.Entry e in Map.catalog.entries)
-                    if (!e.model.Contains("Background")) names.Add(e.model);
+                    if (e != null && !string.IsNullOrEmpty(e.model) && !e.model.Contains("Background")) names.Add(e.model);
             return names;
         }
 

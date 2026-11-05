@@ -18,8 +18,10 @@ namespace SaveThemAll.AutoTile
 
         public GameObject Find(string model)
         {
+            if (entries == null) return null;
             for (int i = 0; i < entries.Count; i++)
-                if (entries[i].model == model) return entries[i].prefab;
+                if (entries[i] != null && entries[i].model == model && entries[i].prefab != null)
+                    return entries[i].prefab;
             return null;
         }
     }
