@@ -1,0 +1,6 @@
+{
+  "name": "SaveThemAll.Lite.Editor",
+  "rootNamespace": "SaveThemAll.Lite.Editor",
+  "references": ["SaveThemAll.Lite"],
+  "includePlatforms": ["Editor"]
+}

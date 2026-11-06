@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "name": "Level_01",
+  "width": 9,
+  "height": 16,
+  "cellSize": 1,
+  "origin": "bottom-left",
+  "terrain": [
+    {
+      "x": 0,
+      "y": 15,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 14,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 13,
+      "overrideModel": ""
+    },
+    {
+      "x": 1,
+      "y": 13,
+      "overrideModel": ""
+    },
+    {
+      "x": 2,
+      "y": 13,
+      "overrideModel": ""
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "overrideModel": ""
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "overrideModel": ""
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "overrideModel": ""
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "overrideModel": ""
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "overrideModel": ""
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "overrideModel": ""
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "overrideModel": ""
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "overrideModel": ""
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "overrideModel": ""
+    }
+  ],
+  "objects": [
+    {
+      "id": "obj_mw31xh5z_1",
+      "type": "cage",
+      "x": 1,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 7,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_2",
+      "type": "exit",
+      "x": 7,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 20,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_3",
+      "type": "lava",
+      "x": 6,
+      "y": 10,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_4",
+      "type": "spikes",
+      "x": 4,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_5",
+      "type": "cage",
+      "x": 6,
+      "y": 5,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 7,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_6",
+      "type": "spawn",
+      "x": 1,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 6,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_7",
+      "type": "stone",
+      "x": 4,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_8",
+      "type": "stone",
+      "x": 5,
+      "y": 1,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_9",
+      "type": "stone",
+      "x": 4,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_10",
+      "type": "stone",
+      "x": 5,
+      "y": 2,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_11",
+      "type": "portal",
+      "x": 1,
+      "y": 9,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "A",
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "id": "obj_mw31xh5z_12",
+      "type": "portal",
+      "x": 7,
+      "y": 3,
+      "width": 1,
+      "height": 1,
+      "rotation": 0,
+      "count": 1,
+      "pairId": "A",
+      "offsetX": 0,
+      "offsetY": 0
+    }
+  ]
+}

@@ -1,0 +1,671 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 159cf2da49875d099c20c324bafb60b0, type: 3}
+  m_Name: Palette
+  m_EditorClassIdentifier: SaveThemAll.Lite::SaveThemAll.Lite.STAPalette
+  entries:
+  - sourceGuid: f9be0e8ef9817114a9f917bb46197d7f
+    label: Bridge
+    prefab: {fileID: 8075867169258486842, guid: 522fd1babe530f2468e0b54f7114f0c6, type: 3}
+    role: 7
+    terrainKey: 
+  - sourceGuid: e9faa7ecd3c12294fb5d1d22d6e2aa77
+    label: Cage_anim1
+    prefab: {fileID: 8013757913996944692, guid: b3a842e50a6c39a4aaa263aec7be15e4, type: 3}
+    role: 4
+    terrainKey: 
+  - sourceGuid: ee45d4a7e9dd2634fae8783b5f31ae97
+    label: Cage
+    prefab: {fileID: 7314281830259210129, guid: a62e4e812c90227498aaa6e6d4ca238f, type: 3}
+    role: 4
+    terrainKey: 
+  - sourceGuid: 6756000c700d3c047b818cd2cd45abf9
+    label: Crates
+    prefab: {fileID: 7983466307587984485, guid: 0c95667df212dd1418842ff1a580931c, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: c790ebf948ed701408a3c0ccb0d5afef
+    label: EnterPipe
+    prefab: {fileID: 7376543283828193458, guid: d511922a86188b049ad62d6ca4fb7621, type: 3}
+    role: 2
+    terrainKey: 
+  - sourceGuid: 1d81f4ee9a6a5f141a25e421e259aab0
+    label: ExitPipe
+    prefab: {fileID: 6912653336461375407, guid: 8cb44fd31adbef542a96a001f21a5b74, type: 3}
+    role: 3
+    terrainKey: 
+  - sourceGuid: a35f25a418b9f3844be20e89f7d460fd
+    label: Grass-BottomCenter
+    prefab: {fileID: 3553970371445080703, guid: f0fd797e658fe8d47aae28401c285d2b, type: 3}
+    role: 1
+    terrainKey: Grass-BottomCenter
+  - sourceGuid: efce7e2609916dd47a964256e7baad20
+    label: Grass-BottomLeft
+    prefab: {fileID: 357055681028957640, guid: 33c6f5cdf9877d24398636c21c67d000, type: 3}
+    role: 1
+    terrainKey: Grass-BottomLeft
+  - sourceGuid: 6524765a2fa17834d957542ebef66787
+    label: Grass-BottomRight
+    prefab: {fileID: 6449038572522626524, guid: 674d384ef083df744814ea61f2357d92, type: 3}
+    role: 1
+    terrainKey: Grass-BottomRight
+  - sourceGuid: 7c6a2f434d7e678429439b83e53eeab7
+    label: Grass-Center-Seam1BottomLeft
+    prefab: {fileID: 4165449855863096496, guid: 80af7471fb128844593c5d1f85300101, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam1BottomLeft
+  - sourceGuid: 7c5962781b6864a47a8222feffaa2711
+    label: Grass-Center-Seam1BottomRight
+    prefab: {fileID: 8516512279073922340, guid: 4fa79c6958f965c47a7042933b6141c6, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam1BottomRight
+  - sourceGuid: a7d824f6ff1ef13429e83cae66d478fc
+    label: Grass-Center-Seam1TopLeft
+    prefab: {fileID: 2122790697657010175, guid: c3de56a515dee034cb31906eec07096e, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam1TopLeft
+  - sourceGuid: 15d401a65f4866d4193b651aa3985cfb
+    label: Grass-Center-Seam1TopRight
+    prefab: {fileID: 5019811774233377320, guid: 7b048647f7b477b488b8a9c707704f80, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam1TopRight
+  - sourceGuid: 786de79c412c1684f92ec7f746e68273
+    label: Grass-Center-Seam2Bottom
+    prefab: {fileID: 2057176797860167164, guid: 6899ad56b5aec9b47b661ac11ec5f835, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam2Bottom
+  - sourceGuid: b25c1c4c427834e4f9b65f41e7d8a685
+    label: Grass-Center-Seam2CrossTopLeft
+    prefab: {fileID: 4027664748620623315, guid: 4e815e5194b25b9428539bedb285f47d, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam2CrossTopLeft
+  - sourceGuid: a35b1ad248ca7584797d79fd72cc4e96
+    label: Grass-Center-Seam2CrossTopRight
+    prefab: {fileID: 3171386824296201488, guid: f241236ecebbba545b67c59256618add, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam2CrossTopRight
+  - sourceGuid: fd772d732c5340349a241cf660ae0d36
+    label: Grass-Center-Seam2Left
+    prefab: {fileID: 4551688422201528588, guid: b7d733648e770e546b97b647d33de91e, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam2Left
+  - sourceGuid: acdceb783101c1f4b93197443273285b
+    label: Grass-Center-Seam2Right
+    prefab: {fileID: 2639588618025662088, guid: c3e9900c4c0cc7d4c932f697e9663cb1, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam2Right
+  - sourceGuid: 65d9670b99833c84191fa4a11668fd62
+    label: Grass-Center-Seam2Top
+    prefab: {fileID: 2717778532546856910, guid: cf483376b5a144949823204ff8bf6acf, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam2Top
+  - sourceGuid: 8c33a563c20a6ff46a747216203afcd5
+    label: Grass-Center-Seam3BottomLeftEmpty
+    prefab: {fileID: 2661376061370203327, guid: cf860c5dc1d87d84c93ae7a08e3b9bda, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam3BottomLeftEmpty
+  - sourceGuid: d48dd2ad53ba6f04d82eebedb7cc145d
+    label: Grass-Center-Seam3BottomRightEmpty
+    prefab: {fileID: 8301544062070333456, guid: 53bbe5ce00879b64db4d53adff0b8925, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam3BottomRightEmpty
+  - sourceGuid: fbdf24977c896614491b52a543f80982
+    label: Grass-Center-Seam3TopLeftEmpty
+    prefab: {fileID: 2433894987608530510, guid: cb9c2d8526f5f2d4b9a8603d1c779fe4, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam3TopLeftEmpty
+  - sourceGuid: cc63331b6f307dd4c874c062f3ea2a86
+    label: Grass-Center-Seam3TopRightEmpty
+    prefab: {fileID: 2780540888504709843, guid: dc9d1e54cc3464847aafafb2bf22678e, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam3TopRightEmpty
+  - sourceGuid: 97f7f8ac7ed6d9d48b44151c78e842a7
+    label: Grass-Center-Seam4
+    prefab: {fileID: 103596902753977514, guid: b4eb6dd2b3425444a8d5d31439755e14, type: 3}
+    role: 1
+    terrainKey: Grass-Center-Seam4
+  - sourceGuid: 7eb4cdf63d700c742a21f1d4daad3f6f
+    label: Grass-Center
+    prefab: {fileID: 5310241736253814487, guid: 99ba56b337305fc43943df6b424c66ea, type: 3}
+    role: 1
+    terrainKey: Grass-Center
+  - sourceGuid: 7b6eb398082d2ec43a442bf772997437
+    label: Grass-CenterLeft
+    prefab: {fileID: 4418538860621268973, guid: 03f9844e2d41b6a4cac9cda6bdee1d40, type: 3}
+    role: 1
+    terrainKey: Grass-CenterLeft
+  - sourceGuid: 1c4f496c5c7f0da428846e26e62ff08a
+    label: Grass-CenterRight
+    prefab: {fileID: 1459286570877147592, guid: ba4d7cb6e73dc324e8af16e4d4a0a8d8, type: 3}
+    role: 1
+    terrainKey: Grass-CenterRight
+  - sourceGuid: 3c0b9500143825343ac88f5f3f5be2fe
+    label: Grass-Corner-Seam1BottomLeft
+    prefab: {fileID: 6381231672035219699, guid: 4ca3457d185f92c4fa866ed248b10510, type: 3}
+    role: 1
+    terrainKey: Grass-Corner-Seam1BottomLeft
+  - sourceGuid: cfab1d054fba29540a26980b94d19c96
+    label: Grass-Corner-Seam1BottomRight
+    prefab: {fileID: 6550667050232830384, guid: 63063e4f0280f084d9b815504ab00818, type: 3}
+    role: 1
+    terrainKey: Grass-Corner-Seam1BottomRight
+  - sourceGuid: c3122d18fb6dc6840a77af9785bc6240
+    label: Grass-Corner-Seam1TopLeft
+    prefab: {fileID: 3338084064832160424, guid: 16d3e4a192b24374cb74677a5f0bea48, type: 3}
+    role: 1
+    terrainKey: Grass-Corner-Seam1TopLeft
+  - sourceGuid: c51592d49fa179a4c847d4f908105cac
+    label: Grass-Corner-Seam1TopRight
+    prefab: {fileID: 4770144431618680483, guid: 6a951aa46de596f47985d2bc2300a9ec, type: 3}
+    role: 1
+    terrainKey: Grass-Corner-Seam1TopRight
+  - sourceGuid: eea473d3d9847094ab46f7c00f36944b
+    label: Grass-Edge-Seam1BottomSLeft
+    prefab: {fileID: 1678950471891861683, guid: 4e782b8c1a2f5924da3c2074d1189c32, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1BottomSLeft
+  - sourceGuid: bfc4294f8d770fc48b3c62a006f9469d
+    label: Grass-Edge-Seam1BottomSRight
+    prefab: {fileID: 4078536075166899790, guid: aa44a856867302646b337cf7db37e2d4, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1BottomSRight
+  - sourceGuid: ef4002a3329edab4fb65009043fa9a74
+    label: Grass-Edge-Seam1LeftSLeft
+    prefab: {fileID: 1540236015029892726, guid: 3c39ec60a2c842b4e8e7ccede4bbeb66, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1LeftSLeft
+  - sourceGuid: a6fe96d8533c3aa4fba7f24af2448507
+    label: Grass-Edge-Seam1LeftSRight
+    prefab: {fileID: 4006893604379777423, guid: 13023f6a110dba6419270ef0f7197b76, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1LeftSRight
+  - sourceGuid: a9060c5132e24b94886c9ead2bf569f8
+    label: Grass-Edge-Seam1RightSLeft
+    prefab: {fileID: 268064299261779629, guid: d908d7bef08494a4da2e9894c32d380f, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1RightSLeft
+  - sourceGuid: ad7b3a03bd5acdb4c831cb86bcfcd157
+    label: Grass-Edge-Seam1RightSRight
+    prefab: {fileID: 7834986927663961500, guid: 5108551ccb788644b9efce3581e29e44, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1RightSRight
+  - sourceGuid: 632cb364fd707874c8c5dee60c75a7f6
+    label: Grass-Edge-Seam1TopSLeft
+    prefab: {fileID: 2236680764361047956, guid: dde2dd120d3403241856d9f54b63ba9a, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1TopSLeft
+  - sourceGuid: d3d63e2d3db4f34468076accd457d1e9
+    label: Grass-Edge-Seam1TopSRight
+    prefab: {fileID: 7336198646922559684, guid: 06621c9350fb58a45bf751d6839e0438, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam1TopSRight
+  - sourceGuid: b8c46494eb230c345bb91b6ad02504f4
+    label: Grass-Edge-Seam2Bottom
+    prefab: {fileID: 8088605208987014870, guid: 536036d8314566045ad556b31dbfeeef, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam2Bottom
+  - sourceGuid: 09a7b87d02dc7c44ab18558f7a69caa5
+    label: Grass-Edge-Seam2Left
+    prefab: {fileID: 4137497736971678539, guid: cbe5c23d4c41c82479811baa6699a2a5, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam2Left
+  - sourceGuid: bfe83307bcc041d4db7c6f3db776520a
+    label: Grass-Edge-Seam2Right
+    prefab: {fileID: 3026215781862873299, guid: 3df248b2caac44440991163c2e72690f, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam2Right
+  - sourceGuid: bfdb64f126cbed74b80b5403710f1492
+    label: Grass-Edge-Seam2Top
+    prefab: {fileID: 192008752808559143, guid: 3ea20965ae0b30c408422d8b2148f750, type: 3}
+    role: 1
+    terrainKey: Grass-Edge-Seam2Top
+  - sourceGuid: 249bb926818e45643908137f6975b9dc
+    label: Grass-HorizontalCenter
+    prefab: {fileID: 9214984176513480396, guid: 95d80c2ab20ecb04394de0adc92930c4, type: 3}
+    role: 1
+    terrainKey: Grass-HorizontalCenter
+  - sourceGuid: 6f6737b405ba98146b53994a282c9f20
+    label: Grass-HorizontalLeft
+    prefab: {fileID: 942248424782472038, guid: 04598882ee34b164788a8e2bf0cee904, type: 3}
+    role: 1
+    terrainKey: Grass-HorizontalLeft
+  - sourceGuid: ac01532442915194e99ab961096f2380
+    label: Grass-HorizontalLeftHard
+    prefab: {fileID: 2833937836285147958, guid: f6564d9b6bd24b648a228fed1068a148, type: 3}
+    role: 1
+    terrainKey: Grass-HorizontalLeftHard
+  - sourceGuid: 0d12a0bc1c8437a41b8583d55dfc6dbb
+    label: Grass-HorizontalRight
+    prefab: {fileID: 2459338515739977169, guid: d04b85eedaefe134fb67e7179954aae4, type: 3}
+    role: 1
+    terrainKey: Grass-HorizontalRight
+  - sourceGuid: 5f6c6456f5a39f04888df95d19600c89
+    label: Grass-HorizontalRightHard
+    prefab: {fileID: 8833685236323609517, guid: b02a061b4c727984592b7d9472b6fd4a, type: 3}
+    role: 1
+    terrainKey: Grass-HorizontalRightHard
+  - sourceGuid: 0351e177b31eace42a243734d8bd7ef9
+    label: Grass-Single
+    prefab: {fileID: 4772196517029783429, guid: 57efe79e6a2fff04b9d5180eef9871ba, type: 3}
+    role: 1
+    terrainKey: Grass-Single
+  - sourceGuid: 4751ea4972b3be549b221b242e8be85b
+    label: Grass-Top-Seam1TopCenterCont-LeftWall-SLeft
+    prefab: {fileID: 4383624713866510233, guid: 9d010d54ddc9f064ea02c95b94330d84, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterCont-LeftWall-SLeft
+  - sourceGuid: 6f0ee2fb8efb30f4c8a34d41cdf2be18
+    label: Grass-Top-Seam1TopCenterCont-LeftWall-SRight
+    prefab: {fileID: 4123881244034072455, guid: 05ab8f4660d1391408e43624306add36, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterCont-LeftWall-SRight
+  - sourceGuid: 67a6cfcd4a1846043bba3168d387e0b0
+    label: Grass-Top-Seam1TopCenterCont-RightWall-SLeft
+    prefab: {fileID: 968390343010846838, guid: 8735236071a1bda45bc6cfd74006f4c4, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterCont-RightWall-SLeft
+  - sourceGuid: dd3ecbfc0a59a964a90d0cd7b87ac5f2
+    label: Grass-Top-Seam1TopCenterCont-RightWall-SRight
+    prefab: {fileID: 5588251321429205211, guid: 909625493889bbc4bb5e8b88c48c01a9, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterCont-RightWall-SRight
+  - sourceGuid: 4dafda26a43a6634ca61d50afbac1a47
+    label: Grass-Top-Seam1TopCenterSLeft
+    prefab: {fileID: 7362369518321903161, guid: 9ac1ca3a996077441bbc2bcb59891243, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterSLeft
+  - sourceGuid: eea320e7aef371c49baa823650cdad39
+    label: Grass-Top-Seam1TopCenterSLeftCont
+    prefab: {fileID: 1981108438164149753, guid: d8b87323a3ae4e9489025114542f3440, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterSLeftCont
+  - sourceGuid: 46abcf9234a2fdf49babcc0b2c3b026d
+    label: Grass-Top-Seam1TopCenterSRight
+    prefab: {fileID: 3397393651449514660, guid: ef7f54e2414d8a44289180c2263635fb, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterSRight
+  - sourceGuid: 0277520887c18ee43b0501289927c049
+    label: Grass-Top-Seam1TopCenterSRightCont
+    prefab: {fileID: 7425308514826369916, guid: eaa35f301945937409968a13f4b76346, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopCenterSRightCont
+  - sourceGuid: 1bb92d10dff0bff45a541e5752bd48cf
+    label: Grass-Top-Seam1TopLeft
+    prefab: {fileID: 1551509748205178423, guid: af3717a98e6226040acf0ca2859368b5, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopLeft
+  - sourceGuid: d5cd745985311fb49978665555179b67
+    label: Grass-Top-Seam1TopLeftCont
+    prefab: {fileID: 5006721219967024273, guid: 2e39b7a661226c84383892b4ba084b6b, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopLeftCont
+  - sourceGuid: e87a2c8e95b9aa942a25d3fb949941fc
+    label: Grass-Top-Seam1TopRight
+    prefab: {fileID: 2081416531813335809, guid: b0ca556720499944ead3cbdc10e69357, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopRight
+  - sourceGuid: 8eb0ec5f137b69b47935bee9915ebca8
+    label: Grass-Top-Seam1TopRightCont
+    prefab: {fileID: 9078654649936805852, guid: 63be55b9544591d479e8a74af728310b, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam1TopRightCont
+  - sourceGuid: b904d7e1e3a76664598e6394113466cd
+    label: Grass-Top-Seam2TopCenter
+    prefab: {fileID: 4369587270116747428, guid: b7405bd259032ff4e97dca36ec62932b, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam2TopCenter
+  - sourceGuid: fdf06c9a1ba15c74bbaad66800f93e99
+    label: Grass-Top-Seam2TopCenterCont-LeftWall
+    prefab: {fileID: 7914808363132496081, guid: a0c5daf43532e0549ad705ba58dbf0d0, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam2TopCenterCont-LeftWall
+  - sourceGuid: 3b3c27b6e5e0c714abaef864c234668a
+    label: Grass-Top-Seam2TopCenterCont-RightWall
+    prefab: {fileID: 6315629781503223803, guid: 49b156cbdc0900b4a9f184359ff3d47e, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam2TopCenterCont-RightWall
+  - sourceGuid: 9fd63a8abf1316e42bb079a7f6d03d6d
+    label: Grass-Top-Seam2TopCenterCont
+    prefab: {fileID: 857864368506596297, guid: 876019159a92ac240a90a38ac96156e1, type: 3}
+    role: 1
+    terrainKey: Grass-Top-Seam2TopCenterCont
+  - sourceGuid: 2b5ffe3baf1276f4dbd3c7ffad2859e2
+    label: Grass-TopCenter
+    prefab: {fileID: 5388748914228615615, guid: 6511c99afefd4234298349aa49639523, type: 3}
+    role: 1
+    terrainKey: Grass-TopCenter
+  - sourceGuid: 37146b9b61225544da7bcedbe19c6d75
+    label: Grass-TopLeft
+    prefab: {fileID: 378339143754589390, guid: 21263ffa66aac034a90f6f089f08326e, type: 3}
+    role: 1
+    terrainKey: Grass-TopLeft
+  - sourceGuid: 14a6d4565bda44b41a93e69c9d33d88d
+    label: Grass-TopRight
+    prefab: {fileID: 1238626669348668284, guid: 6deeed7605ffefd409a566d72d3d8def, type: 3}
+    role: 1
+    terrainKey: Grass-TopRight
+  - sourceGuid: ad6d6bcdbb64e4542ab7136413aff838
+    label: Grass-VerticalBottom
+    prefab: {fileID: 3332459004260696506, guid: 189983bc8337ca34b96e27b22ad472d9, type: 3}
+    role: 1
+    terrainKey: Grass-VerticalBottom
+  - sourceGuid: e3f7dedece5d8724eb7164b1e5788373
+    label: Grass-VerticalCenter
+    prefab: {fileID: 2403525860908175361, guid: 97318179b72c958489f9c78caa1ac74f, type: 3}
+    role: 1
+    terrainKey: Grass-VerticalCenter
+  - sourceGuid: 8eec78a6f1046944c92b948b84d142af
+    label: Grass-VerticalTop
+    prefab: {fileID: 4342573605229446773, guid: 07619129c5146634794cca993c7d6d00, type: 3}
+    role: 1
+    terrainKey: Grass-VerticalTop
+  - sourceGuid: e4c34e17e00bdc54fbfba8976cfb75ff
+    label: Grass-Wall-Between-NoGrass
+    prefab: {fileID: 6161202607500208219, guid: f6785c064b2556949bb9d393c753b0a4, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-Between-NoGrass
+  - sourceGuid: 55780c72965b031438f53b96fbec66d3
+    label: Grass-Wall-Between
+    prefab: {fileID: 6013796967313072737, guid: 72b73e9a15b827a479d40d240de175c8, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-Between
+  - sourceGuid: 2d8196e3bef08764dbede89ca5271306
+    label: Grass-Wall-BetweenTop
+    prefab: {fileID: 1575240708622239189, guid: 41b7a01e4dfeae946baec8e712b0e408, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-BetweenTop
+  - sourceGuid: 2f836cc59f8570c4e8a8f0220dd485e4
+    label: Grass-Wall-SideLeft
+    prefab: {fileID: 9102139139841182000, guid: 3c822f097f1da94469a6ddedbc0e2273, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideLeft
+  - sourceGuid: baf780db91b5cba40ab5ba253a341647
+    label: Grass-Wall-SideLeftCont
+    prefab: {fileID: 4148722962869527017, guid: f37b296221c5a3143a652c9374a07c16, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideLeftCont
+  - sourceGuid: 63948dc7fde98b74589e10764797a18f
+    label: Grass-Wall-SideRight
+    prefab: {fileID: 4781182326933904594, guid: 5a28a80b011e85149816775f33c9ff00, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideRight
+  - sourceGuid: a36c2254d18e5af4f92e47177799783c
+    label: Grass-Wall-SideRightCont
+    prefab: {fileID: 7620583886075242414, guid: 7900c857d21064843b359f27af11e70a, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideRightCont
+  - sourceGuid: dce2ec587d8dd9b4c8990812e01916d8
+    label: Grass-Wall-SideTopLeft-Hard
+    prefab: {fileID: 2479622391431587723, guid: 32b2d9c85e0ebca4492c0dffa4c40a66, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideTopLeft-Hard
+  - sourceGuid: 8fd9e100bcc8c8645b7290fbfbd22b33
+    label: Grass-Wall-SideTopLeft
+    prefab: {fileID: 3576653018593988740, guid: 76eecf3ac53567147920a9ac343a8013, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideTopLeft
+  - sourceGuid: 482bdff6960189b478799afa2d9b9741
+    label: Grass-Wall-SideTopLeftCont
+    prefab: {fileID: 5608936486951330165, guid: 4ae1cd6ceb687b54388d28001188dcf3, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideTopLeftCont
+  - sourceGuid: 7e8a96f3b8a17424bab46f1f732818e4
+    label: Grass-Wall-SideTopRight-Hard
+    prefab: {fileID: 9148169568720017428, guid: bf753bea30bd9904bbf553b2b45d8d87, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideTopRight-Hard
+  - sourceGuid: 9d9e8fdd54ce61f499664e59f9d900fe
+    label: Grass-Wall-SideTopRight
+    prefab: {fileID: 6860310686902659045, guid: f386a24f7ae350b4291b57d99df324d0, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideTopRight
+  - sourceGuid: 7cf1ccd783c778342a7a08c2ff372b61
+    label: Grass-Wall-SideTopRightCont-NoGrass
+    prefab: {fileID: 8361740377941945851, guid: b1864fd8aed199d4bbd60b113cf611cd, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideTopRightCont-NoGrass
+  - sourceGuid: 380d33b761cc72345b5dda8c2a157b66
+    label: Grass-Wall-SideTopRightCont
+    prefab: {fileID: 5145294312100924990, guid: cf1ce9b7c63c2c948b885c9520bbc230, type: 3}
+    role: 1
+    terrainKey: Grass-Wall-SideTopRightCont
+  - sourceGuid: e40722c33b25a104a87d34c09ce33332
+    label: GrassBase
+    prefab: {fileID: 584687164939922555, guid: b2ee9376c513f3e45a701d439f7ee81e, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: eb5df82c9dafc1544826eef7b02cbe7b
+    label: GrassGridBackground
+    prefab: {fileID: 1145426567748791561, guid: 9c2ec03b239638d409762c285cc879d3, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: b79140fb5873d854c8bcc5c14a2da570
+    label: GrassGridBackgroundCenter
+    prefab: {fileID: 3382631261010424430, guid: b0804abb29499eb4593dec2527d362a3, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: b0df8fd522bdfcf4cae0264a06510713
+    label: GrassGridBackgroundEdge
+    prefab: {fileID: 3607289817699189818, guid: 3bedd4a3908f1e941bf7d9edda57bf07, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 82e60a078169003449ebb6919522153a
+    label: HintHand
+    prefab: {fileID: 4563794710789341952, guid: b70439c64c826924098dbbf0f9b34fda, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 89ce3d8401914ad4a9d7513aae1d4676
+    label: HintHandfbx
+    prefab: {fileID: 4019828212449059005, guid: 9b5ed9cf82e0bc14496fa80412d93df0, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 44751fed86e99924bb0c90434c67be8f
+    label: ice
+    prefab: {fileID: 5060437617730794158, guid: 106925f831e139b459c0ec9a9d6c0fe0, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 6989331a38ba5914e913d2b68d882bfe
+    label: Key
+    prefab: {fileID: 2283485764455191704, guid: 5a7b849b7f69acb48a14376cc54309c7, type: 3}
+    role: 12
+    terrainKey: 
+  - sourceGuid: b71d5ccdb19aaf547b91087e0e88b6c8
+    label: Key_animation
+    prefab: {fileID: 2113457351623396548, guid: cd87b538b2df91640b8b3f3e1334da8c, type: 3}
+    role: 12
+    terrainKey: 
+  - sourceGuid: 27a4cfcf35c7d6c42afcffb84a9d4850
+    label: LavaLeft-Floating
+    prefab: {fileID: 8614151346570199803, guid: 265799925c4855a4cbbb20ff61921fb4, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: 9a4164556b25e9546bd9d9715ed1b864
+    label: LavaLeft
+    prefab: {fileID: 2817042548601369814, guid: 98b4a31a5bc38db4c92cd5719a34e915, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: fab47e2450f4a804588791eeb66b1214
+    label: LavaMiddle-Floating
+    prefab: {fileID: 141597273351039968, guid: 2183330a516bcdd4daa55abc532dd76f, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: 444a5a88ddc6f064782bdbc11aac4b08
+    label: LavaMiddle
+    prefab: {fileID: 1537899635142996862, guid: 4be688f60e0c4f74699ae8ade48bab73, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: e80bd4ab9a379c248b09e250c6018daf
+    label: LavaPreview
+    prefab: {fileID: 3621768159766189965, guid: 37dc44361ed82b4478f2d6f4a2e4572a, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: df636ba612df9244283e4770ff217859
+    label: LavaRight-Floating
+    prefab: {fileID: 360615526315430348, guid: 419a957676abeae4593e2ec78a7a4ded, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: 9c98e923038745d4394a9bd03d5abc7b
+    label: LavaRight
+    prefab: {fileID: 6744482534342428703, guid: 3b610a60e11cc984da90b979ee33228a, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: 1bdcfc302c10fb041accb93a1595d9a7
+    label: LavaSingle-Floating
+    prefab: {fileID: 5926973849147344859, guid: 2fc490257eb03d84381bcdcb8d8c7d79, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: 99c4e868d70d9114cb54e20289c31d1a
+    label: LavaSingle
+    prefab: {fileID: 7018732068523958237, guid: 267536ba4af5d6f459edc3146474b9c9, type: 3}
+    role: 11
+    terrainKey: 
+  - sourceGuid: ca469890dc0b7bb4eaa690392091e30f
+    label: lock_animation
+    prefab: {fileID: 1671022141817031469, guid: 89aa0c1a9ed303549ba9c5cd9b42f738, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 10651b539a214984089e504d917d03a0
+    label: lock
+    prefab: {fileID: 2881518615242782710, guid: 6b9ef347dfd0d8141a04dbc7196e3e42, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 1b97ad3897d517240853603d4097351c
+    label: Parachute
+    prefab: {fileID: 5806574500688684255, guid: 1c101175e9dc1464e9fbf8c5cdb5ca46, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: ee10cfb2606260240bc5225f3ad349e0
+    label: 20_item
+    prefab: {fileID: 8976593354776357526, guid: 51da4986c2eedbe49995a525bfd3934d, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 7b8e55574a711474a8d20ca516a2db10
+    label: Penguin_downstain
+    prefab: {fileID: 4687672074290375180, guid: 0a79077f33a3484449237185ab7a05e8, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: ce9877ac2907b16429d7ad808513719a
+    label: Penguin_idle
+    prefab: {fileID: 7393477205730528434, guid: 2baf5c8ca4c5f0d4786b69872bd736fb, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: c38fd640ec76a2242a17acc29d43de80
+    label: Penguin_jump
+    prefab: {fileID: 5546327021260009182, guid: c80581a0a9f3d6640b63db16a5c1365f, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: a8d7376366256124b9deba74718b585f
+    label: Penguin_pickaxe
+    prefab: {fileID: 9061452954574730795, guid: c53e742f345db0e4196ab28dfe5bdd09, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 0986895116e87b9488ed0e6b52818c25
+    label: Penguin_upstain
+    prefab: {fileID: 5923589725018033856, guid: 51a8a9714ec125f42a8f6c65843da1f9, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 45f7340495e6d404180c06e6c295d29a
+    label: Penguin_walk
+    prefab: {fileID: 6855013914675275489, guid: e163e6ad8d5b8c74abfb3504f183646d, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 2a97e21f4f45f6b4bade1deadcb190f3
+    label: Penguin_walk_ver 2
+    prefab: {fileID: 2288601995260373862, guid: 80db6a1313379414c805d56214a4d8c4, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 8bad02f8b1f766f4a9718aa517f03361
+    label: penguin
+    prefab: {fileID: 8938455271337422018, guid: 48bccaccce4b5f649a84f6f601fda428, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 69f710a0f5407294ea1d8cf57180b6b7
+    label: Penguin_poseJump
+    prefab: {fileID: 1620714116737238104, guid: 4e5f865832785cf41a5d5fe95d8d8eaa, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 88f2ece12b413cc49be12f563cbec1a2
+    label: Penguin_poseJump_WithParachute
+    prefab: {fileID: 5503690281926954282, guid: 2eec25faf6c4e6c42a7ab9d1c1af4e7d, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 9185daea367191d4fa8842f41d89e46b
+    label: Penguin_rig
+    prefab: {fileID: 7964823655263859233, guid: 5ef9f2064512e714c959b79095cb1bf9, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 19a242b83e3ee5348a3d1193f89009db
+    label: Pickaxe
+    prefab: {fileID: 6927420905242552875, guid: 5810a42879312ef46ad62286c944f3cf, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 8d62a1019695a404a8cc35dbadfd37c5
+    label: Portal
+    prefab: {fileID: 8757492860653877860, guid: 5ef0cd734c3d9b54489ade78d80422be, type: 3}
+    role: 0
+    terrainKey: 
+  - sourceGuid: 290bd82ecfb40e540a4c53c55701a4e1
+    label: Spikes_bottom
+    prefab: {fileID: 4339339025673782319, guid: 0257e2a0f3f96c8448afceeacfa76c38, type: 3}
+    role: 5
+    terrainKey: 
+  - sourceGuid: a595267da9fedbf468567ea0afdaec8f
+    label: Spikes_left
+    prefab: {fileID: 3523208947843940071, guid: a23f8cbe46067664fb8c81914c73094a, type: 3}
+    role: 5
+    terrainKey: 
+  - sourceGuid: 42356213356d48c4aa254f980650ba95
+    label: Spikes_right
+    prefab: {fileID: 7768732926915152338, guid: 221c8efdf3dad3c4192f74c8f9e3f344, type: 3}
+    role: 5
+    terrainKey: 
+  - sourceGuid: 10ad2a58f9e9f2c47833d3cfc2ff5e14
+    label: Spikes_top
+    prefab: {fileID: 8019301015371734990, guid: 27d55a0b376e31548a6faf9020ca9178, type: 3}
+    role: 5
+    terrainKey: 
+  - sourceGuid: 05120f682c92ed144ba75f01f33c36c0
+    label: Stairs
+    prefab: {fileID: 3533792212061900147, guid: 3ec40bc10a9723642ae8c6e545156657, type: 3}
+    role: 6
+    terrainKey: 
+  - sourceGuid: d8ab29e81082a514baedd3cd1e8d1744
+    label: StairsLeft
+    prefab: {fileID: 2641132013636655059, guid: b09f2b166ecde4f4b881171eadca0f44, type: 3}
+    role: 6
+    terrainKey: 
+  - sourceGuid: 72ab49e4deea5d646a14ca5d4e9232a8
+    label: StairsRight
+    prefab: {fileID: 3798787131866601939, guid: 08751b62689330847b5c590784de7a89, type: 3}
+    role: 6
+    terrainKey: 
+  - sourceGuid: 33e4623bcc25aa8409fbb406fe655e3a
+    label: stop sign
+    prefab: {fileID: 2290618740789155411, guid: 65dea52e3b651d04cbad41fc672eafa1, type: 3}
+    role: 0
+    terrainKey: 
+  importBindings:
+  - type: cage
+    prefab: {fileID: 7314281830259210129, guid: a62e4e812c90227498aaa6e6d4ca238f, type: 3}
+    role: 4
+  - type: exit
+    prefab: {fileID: 6912653336461375407, guid: 8cb44fd31adbef542a96a001f21a5b74, type: 3}
+    role: 3
+  - type: spawn
+    prefab: {fileID: 7376543283828193458, guid: d511922a86188b049ad62d6ca4fb7621, type: 3}
+    role: 2
+  - type: spikes
+    prefab: {fileID: 4339339025673782319, guid: 0257e2a0f3f96c8448afceeacfa76c38, type: 3}
+    role: 5
+  - type: stone
+    prefab: {fileID: 919132149155446097, guid: 44751fed86e99924bb0c90434c67be8f, type: 3}
+    role: 9
