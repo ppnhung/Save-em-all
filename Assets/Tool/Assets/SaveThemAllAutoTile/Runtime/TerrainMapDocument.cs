@@ -15,7 +15,6 @@ namespace SaveThemAll.AutoTile
         public string origin;
         public TerrainRecord[] terrain;
         public MapObjectRecord[] objects;
-        public MapAssetDefinition[] assets;
 
         public static TerrainMapDocument Parse(string json)
         {
@@ -43,22 +42,11 @@ namespace SaveThemAll.AutoTile
                 if (!cells.Add(new Vector2Int(c.x, c.y))) throw new ArgumentException("Duplicate terrain cell.");
                 if (!string.IsNullOrEmpty(c.overrideModel) && !modelNames.Contains(c.overrideModel)) throw new ArgumentException("Unknown terrain override: " + c.overrideModel);
             }
-            HashSet<string> customTypes = new HashSet<string>();
-            if (assets != null)
-            {
-                if (assets.Length > 4096) throw new ArgumentException("Too many asset definitions.");
-                foreach (MapAssetDefinition asset in assets)
-                {
-                    if (asset == null || !MapAssetDefinition.IsPrefabId(asset.id) || !customTypes.Add(asset.id)) throw new ArgumentException("Invalid or duplicate prefab asset ID.");
-                    if (string.IsNullOrWhiteSpace(asset.label) || asset.label.Length > 160 || asset.w < 1 || asset.w > 64 || asset.h < 1 || asset.h > 64 || !MapAssetDefinition.KnownRole(asset.role)) throw new ArgumentException("Invalid asset definition.");
-                    if (asset.sourcePath != null && asset.sourcePath.Length > 1024) throw new ArgumentException("Asset path too long.");
-                }
-            }
             HashSet<string> ids = new HashSet<string>();
             HashSet<Vector2Int> occupied = new HashSet<Vector2Int>();
             foreach (MapObjectRecord o in objects)
             {
-                if (o == null || (!KnownType(o.type) && !customTypes.Contains(o.type))) throw new ArgumentException("Unknown object type.");
+                if (o == null || !KnownType(o.type)) throw new ArgumentException("Unknown object type.");
                 if (string.IsNullOrEmpty(o.id) || o.id.Length > 100 || !ids.Add(o.id)) throw new ArgumentException("Missing or duplicate object ID.");
                 if (!Contains(o.x, o.y, o.width, o.height)) throw new ArgumentException("Object outside board: " + o.id);
                 if (o.rotation != 0 && o.rotation != 90 && o.rotation != 180 && o.rotation != 270) throw new ArgumentException("Invalid rotation: " + o.id);
@@ -74,19 +62,6 @@ namespace SaveThemAll.AutoTile
         private static bool Finite(float v) { return !float.IsNaN(v) && !float.IsInfinity(v); }
         public static readonly string[] ObjectTypes = { "lava", "stone", "spikes", "cage", "spawn", "exit", "portal", "fan", "bridge", "key" };
         public static bool KnownType(string type) { return Array.IndexOf(ObjectTypes, type) >= 0; }
-    }
-    [Serializable]
-    public sealed class MapAssetDefinition
-    {
-        public string id, label, role, sourcePath, thumbnail;
-        public int w = 1, h = 1;
-        public static bool IsPrefabId(string id)
-        {
-            if (id == null || id.Length != 39 || !id.StartsWith("prefab_", StringComparison.Ordinal)) return false;
-            for (int i = 7; i < id.Length; i++) if (!(id[i] >= '0' && id[i] <= '9') && !(id[i] >= 'a' && id[i] <= 'f')) return false;
-            return true;
-        }
-        public static bool KnownRole(string role) { return role == "prop" || TerrainMapDocument.KnownType(role); }
     }
     [Serializable]
     public sealed class TerrainRecord { public int x, y; public string overrideModel; }

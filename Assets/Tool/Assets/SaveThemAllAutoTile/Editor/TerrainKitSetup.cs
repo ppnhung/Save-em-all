@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 namespace SaveThemAll.AutoTile.Editor
 {
-    public static partial class TerrainKitSetup
+    public static class TerrainKitSetup
     {
         [MenuItem("Tools/Save Them All/Setup Kit + Create Demo")]
         public static void Setup()
@@ -46,9 +46,50 @@ namespace SaveThemAll.AutoTile.Editor
                     string path = paths[i].Replace('\\', '/');
                     string name = Path.GetFileNameWithoutExtension(path);
                     EditorUtility.DisplayProgressBar("Save Them All", "Preparing " + name, (float)i / paths.Length);
-                    GameObject prefab = CreateNormalizedPrefab(name, path, sourceByName, output,
-                        volumeShader, materialByHash, previewScene);
-                    catalog.entries.Add(new TerrainCatalog.Entry { model = name, prefab = prefab });
+                    // The supplied BottomSRight body has a different boundary profile.
+                    // Build its counterpart from BottomSLeft in the generated prefab only.
+                    bool mirrorCompatibleBody = name == "Grass-Edge-Seam1BottomSRight";
+                    string geometryPath = mirrorCompatibleBody
+                        ? sourceByName["Grass-Edge-Seam1BottomSLeft"] : path;
+                    GameObject source = AssetDatabase.LoadAssetAtPath<GameObject>(geometryPath);
+                    if (source == null) throw new InvalidOperationException("Unity has not imported: " + geometryPath);
+                    Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(Path.ChangeExtension(path, ".png"));
+                    if (texture == null) throw new InvalidOperationException("Missing PNG for " + name);
+                    string hash;
+                    using (SHA256 sha = SHA256.Create())
+                        hash = BitConverter.ToString(sha.ComputeHash(File.ReadAllBytes(Path.ChangeExtension(path, ".png"))));
+                    Material material;
+                    if (!materialByHash.TryGetValue(hash, out material))
+                    {
+                        material = MakeMaterial(texture, volumeShader);
+                        AssetDatabase.CreateAsset(material, output + "/Materials/Atlas_" + materialByHash.Count + ".mat");
+                        materialByHash.Add(hash, material);
+                    }
+
+                    GameObject wrapper = new GameObject(name);
+                    SceneManager.MoveGameObjectToScene(wrapper, previewScene);
+                    try
+                    {
+                        GameObject visual = (GameObject)PrefabUtility.InstantiatePrefab(source, previewScene);
+                        visual.transform.SetParent(wrapper.transform, false);
+                        if (mirrorCompatibleBody)
+                        {
+                            Vector3 scale = visual.transform.localScale; scale.x *= -1; visual.transform.localScale = scale;
+                        }
+                        if (!name.Contains("Background")) NormalizeBody(wrapper.transform, visual.transform);
+                        foreach (Renderer renderer in visual.GetComponentsInChildren<Renderer>(true))
+                        {
+                            Material[] assigned = new Material[renderer.sharedMaterials.Length];
+                            for (int j = 0; j < assigned.Length; j++) assigned[j] = material;
+                            renderer.sharedMaterials = assigned;
+                            renderer.shadowCastingMode = ShadowCastingMode.Off;
+                            renderer.receiveShadows = false;
+                        }
+                        GameObject prefab = PrefabUtility.SaveAsPrefabAsset(wrapper, output + "/Prefabs/" + name + ".prefab");
+                        if (prefab == null) throw new InvalidOperationException("Could not save prefab: " + name);
+                        catalog.entries.Add(new TerrainCatalog.Entry { model = name, prefab = prefab });
+                    }
+                    finally { UnityEngine.Object.DestroyImmediate(wrapper); }
                 }
                 AssetDatabase.CreateAsset(catalog, output + "/TerrainCatalog.asset");
                 AssetDatabase.SaveAssets();
@@ -57,57 +98,6 @@ namespace SaveThemAll.AutoTile.Editor
                 Debug.Log("Terrain kit created at " + output + ". 256 neighbor cases, 68 automatic model variants; remaining models available as overrides. Original FBX files and UVs are unchanged.");
             }
             finally { EditorUtility.ClearProgressBar(); EditorSceneManager.ClosePreviewScene(previewScene); }
-        }
-
-        // Setup and recovery share the same geometry, seam and material rules.
-        private static GameObject CreateNormalizedPrefab(string name, string path,
-            Dictionary<string, string> sourceByName, string output, Shader volumeShader,
-            Dictionary<string, Material> materialByHash, Scene previewScene)
-        {
-            // The supplied BottomSRight body has a different boundary profile.
-            // Build its counterpart from BottomSLeft in the generated prefab only.
-            bool mirrorCompatibleBody = name == "Grass-Edge-Seam1BottomSRight";
-            string geometryPath = mirrorCompatibleBody
-                ? sourceByName["Grass-Edge-Seam1BottomSLeft"] : path;
-            GameObject source = AssetDatabase.LoadAssetAtPath<GameObject>(geometryPath);
-            if (source == null) throw new InvalidOperationException("Unity has not imported: " + geometryPath);
-            Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(Path.ChangeExtension(path, ".png"));
-            if (texture == null) throw new InvalidOperationException("Missing PNG for " + name);
-            string hash;
-            using (SHA256 sha = SHA256.Create())
-                hash = BitConverter.ToString(sha.ComputeHash(File.ReadAllBytes(Path.ChangeExtension(path, ".png"))));
-            Material material;
-            if (!materialByHash.TryGetValue(hash, out material))
-            {
-                material = MakeMaterial(texture, volumeShader);
-                AssetDatabase.CreateAsset(material, output + "/Materials/Atlas_" + materialByHash.Count + ".mat");
-                materialByHash.Add(hash, material);
-            }
-
-            GameObject wrapper = new GameObject(name);
-            SceneManager.MoveGameObjectToScene(wrapper, previewScene);
-            try
-            {
-                GameObject visual = (GameObject)PrefabUtility.InstantiatePrefab(source, previewScene);
-                visual.transform.SetParent(wrapper.transform, false);
-                if (mirrorCompatibleBody)
-                {
-                    Vector3 scale = visual.transform.localScale; scale.x *= -1; visual.transform.localScale = scale;
-                }
-                if (!name.Contains("Background")) NormalizeBody(wrapper.transform, visual.transform);
-                foreach (Renderer renderer in visual.GetComponentsInChildren<Renderer>(true))
-                {
-                    Material[] assigned = new Material[renderer.sharedMaterials.Length];
-                    for (int j = 0; j < assigned.Length; j++) assigned[j] = material;
-                    renderer.sharedMaterials = assigned;
-                    renderer.shadowCastingMode = ShadowCastingMode.Off;
-                    renderer.receiveShadows = false;
-                }
-                GameObject prefab = PrefabUtility.SaveAsPrefabAsset(wrapper, output + "/Prefabs/" + name + ".prefab");
-                if (prefab == null) throw new InvalidOperationException("Could not save prefab: " + name);
-                return prefab;
-            }
-            finally { UnityEngine.Object.DestroyImmediate(wrapper); }
         }
 
         private static string FindKitRoot()

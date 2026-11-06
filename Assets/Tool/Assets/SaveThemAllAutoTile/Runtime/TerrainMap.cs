@@ -96,32 +96,13 @@ namespace SaveThemAll.AutoTile
             Cell existing;
             bool found = data.TryGetValue(p, out existing);
             string key = string.IsNullOrWhiteSpace(overrideModel) ? null : overrideModel.Trim();
+            if (solid && catalog != null && catalog.Find(key ?? TerrainRules.Resolve(MaskAt(p))) == null)
+            {
+                Debug.LogError("Missing terrain prefab: " + key + ". Run Setup Kit or fix the catalog.", this);
+                return false;
+            }
             if (solid && found && string.Equals(existing.overrideModel ?? "", key ?? "")) return false;
             if (!solid && !found) return false;
-            // Validate all nine future variants before changing data or deleting a visual.
-            // Erasing a cell can require new edge/corner prefabs in its neighbours too.
-            for (int dy = -1; dy <= 1; dy++) for (int dx = -1; dx <= 1; dx++)
-            {
-                Vector2Int q = p + new Vector2Int(dx, dy);
-                if (!InBounds(q) || !(q == p ? solid : data.ContainsKey(q))) continue;
-                string nextKey = q == p ? key : data[q].overrideModel;
-                if (string.IsNullOrEmpty(nextKey))
-                {
-                    int mask = 0;
-                    for (int i = 0; i < 8; i++)
-                    {
-                        Vector2Int n = q + new Vector2Int(TerrainRules.DX[i], TerrainRules.DY[i]);
-                        if (InBounds(n) && (n == p ? solid : data.ContainsKey(n))) mask |= 1 << i;
-                    }
-                    nextKey = TerrainRules.Resolve(mask);
-                }
-                if (catalog == null || catalog.Find(nextKey) == null)
-                {
-                    Debug.LogError("Paint cancelled; missing terrain prefab: " + nextKey +
-                        ". Use Repair Terrain Catalog in Import TerrainMap. Existing cells are unchanged.", this);
-                    return false;
-                }
-            }
             if (solid)
             {
                 if (found) existing.overrideModel = key;
@@ -161,33 +142,11 @@ namespace SaveThemAll.AutoTile
         {
             width = Mathf.Max(1, width); height = Mathf.Max(1, height); cellSize = Mathf.Max(0.01f, cellSize);
             LoadCaches();
-            string missing;
-            if (!HasRequiredPrefabs(out missing))
-            {
-                Debug.LogError("Rebuild cancelled; missing terrain prefab(s): " + missing +
-                    ". Use Repair Terrain Catalog in Import TerrainMap. Existing visuals are preserved.", this);
-                return;
-            }
             EnsureRoots();
             ClearChildren(visualRoot);
             instances.Clear();
             foreach (Vector2Int p in data.Keys) if (InBounds(p)) RefreshVisual(p);
             RebuildCollision();
-        }
-
-        public bool HasRequiredPrefabs(out string missing)
-        {
-            EnsureCache();
-            var names = new List<string>();
-            foreach (Vector2Int p in data.Keys)
-            {
-                if (!InBounds(p)) continue;
-                string key = ModelAt(p);
-                if ((catalog == null || catalog.Find(key) == null) && !names.Contains(key)) names.Add(key);
-            }
-            names.Sort(StringComparer.Ordinal);
-            missing = string.Join(", ", names.ToArray());
-            return names.Count == 0;
         }
 
         public void LoadCaches()
@@ -218,12 +177,6 @@ namespace SaveThemAll.AutoTile
         private void RefreshVisual(Vector2Int p)
         {
             string key = ModelAt(p);
-            GameObject prefab = key == null || catalog == null ? null : catalog.Find(key);
-            if (key != null && prefab == null)
-            {
-                Debug.LogError("Missing terrain prefab: " + key + ". Existing visual is preserved.", this);
-                return;
-            }
             TerrainTileInstance old;
             if (instances.TryGetValue(p, out old))
             {
@@ -232,6 +185,12 @@ namespace SaveThemAll.AutoTile
                 instances.Remove(p);
             }
             if (key == null) return;
+            GameObject prefab = catalog == null ? null : catalog.Find(key);
+            if (prefab == null)
+            {
+                Debug.LogError("Missing terrain prefab: " + key + ". Run Setup Kit or fix the catalog.", this);
+                return;
+            }
             GameObject go;
 #if UNITY_EDITOR
             if (!Application.isPlaying)
